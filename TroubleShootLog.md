@@ -1,10 +1,21 @@
 ## Dev and Production Dependencies - Log
 
+### Quick Summary:
+
+# ProductivityApp - Full Troubleshooting Log
+
+- This document details all the troubleshooting and debugging steps performed on **August 11, 2025** for the ProductivityApp project.  
+- It combines the original dependency logs with the additional troubleshooting efforts done today.
+
+---
+
 Command to run list of all dependencies + versions:
 
 ```bash
 npm list --depth=0
 ```
+
+--- 
 
 ### Node
 
@@ -161,14 +172,10 @@ This is the key bit that fixes the “Unable to resolve ../Utilities/Platform”
 
 ```
 
-## Quick Summary:
+--- 
 
--# ProductivityApp - Full Troubleshooting Log
+# Resumed / Cleaned Up Version:
 
-This document details all the troubleshooting and debugging steps performed on **August 11, 2025** for the ProductivityApp project.  
-It combines the original dependency logs with the additional troubleshooting efforts done today.
-
----
 
 ## 1. Environment & Initial Setup
 
@@ -328,7 +335,7 @@ These versions have unresolved breaking changes when combined, especially in web
 
 1. **Start fresh** with a new Expo project using a **known-good compatibility matrix**.
 2. Bypass NativeWind - style with StyleSheets
-3. Workaround for Expo-Router -->
+3. Workaround for Expo-Router --> react-navigation
 
 ---
 
@@ -337,3 +344,16 @@ These versions have unresolved breaking changes when combined, especially in web
 Multiple configuration attempts were made to resolve bundling issues between Expo Router, NativeWind, and React Native for web rendering.  
 Despite following official docs and community fixes, incompatibility between current versions prevented successful web deployment.  
 The solution is to restart with a compatible Expo/NativeWind/Router setup to meet cross-platform requirements.
+
+### Resources: 
+
+- [https://docs.expo.dev/router/reference/troubleshooting/]
+- [https://docs.expo.dev/guides/customizing-metro/#web-support]
+- [https://docs.expo.dev/guides/typescript/]
+- [https://www.typescriptlang.org/docs/handbook/2/everyday-types.html]
+- [https://github.com/nativewind/nativewind/issues/610]
+- [https://docs.expo.dev/router/reference/troubleshooting/]
+- [https://medium.com/@learnwithgeek/nativewind-v4-not-working-with-reactnative-typescript-and-expo-c3a69644ab74]
+- [https://medium.com/@python-javascript-php-html-css/fixing-the-expo-router-for-macos-and-react-native-babel-plugins-property-error-b73b40a885c3]
+
+
