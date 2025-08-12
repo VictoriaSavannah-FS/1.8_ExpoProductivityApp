@@ -22,8 +22,7 @@
       },
       "edgeToEdgeEnabled": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "web": { "favicon": "./assets/favicon.png", "bundler": "metro" },
+    "plugins": ["expo-router", "expo-sqlite", "expo-secure-store"]
   }
 }

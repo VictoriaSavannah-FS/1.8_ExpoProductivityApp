@@ -1,4 +1,3 @@
-// THIS IS THE TASK LISTS PAGE
 import React, { useState } from "react";
 import {
   View,
@@ -8,12 +7,13 @@ import {
   StyleSheet,
 } from "react-native";
 import { router } from "expo-router";
-export default function AddTaskScreen() {
+export default function DeleteTaskScreen() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const handleSave = () => {
+  const handleDelete = () => {
     if (title.trim()) {
-      console.log("Saving task:", { title, description });
+      // dbs to stire eddits/cahnges
+      console.log("Task Deleted:", { title, description });
       router.back();
     }
   };
@@ -36,8 +36,8 @@ export default function AddTaskScreen() {
           multiline
           numberOfLines={4}
         />
-        <TouchableOpacity style={styles.saveButton} onPress={handleSave}>
-          <Text style={styles.saveButtonText}>Save Task</Text>
+        <TouchableOpacity style={styles.saveButton} onPress={handleDelete}>
+          <Text style={styles.saveButtonText}>Delete Task</Text>
         </TouchableOpacity>
       </View>
     </View>
